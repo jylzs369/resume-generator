@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人简历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Microsoft Yahei';
+            background: #000;
+        }
+        main {
+            position: relative;
+            background: #fff;
+            color: #773460;
+            width: 790px;
+            height: 1122px;
+            margin: 0 auto;
+        }
+        section {
+            position: absolute;
+        }
+        ul, li {
+            list-style: none;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        i {
+            font-style: normal;
+            font-size: 80%;
+           display: none;
+        }
+        h1 {
+            display: none;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            float: left;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        h4 {
+            float: left;
+            font-size: 14px;
+            margin-left: 10px;
+            margin-top: 1px;
+        }
+        h5 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        img {
+            width: 100%;
+        }
+        .avatar, 
+        .info,
+        .language,
+        .interest {
+            width: 170px;
+            padding-top: 30px;
+            right: 30px;
+        }
+        .avatar {
+            height: 200px;
+            top: 0;
+            text-align: center;
+            background: #fff;
+        }
+        .avatar div {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 5px solid #773460;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .avatar p {
+            margin-top: 10px;
+            color: #773460;
+        }
+        .avatar span {
+            font-size: 24px;
+            letter-spacing: 5px;
+        }
+        .info {
+            top: 200px;
+        }
+        .info li {
+            margin-bottom: 10px;
+            font-size: 80%;
+        }
+        .info span {
+            display: inline-block;
+            padding: 3px 5px 3px 5px;
+            font-size: 80%;
+            color: #fff;
+            background: #773460; 
+            /* background: 
+                linear-gradient(-135deg, transparent 10px, #773460 0) top right,
+                linear-gradient(-45deg, transparent 10px, #773460 0) bottom right; */
+            background-size: 100% 50%;
+            background-repeat: no-repeat;
+            border-radius: 3px;
+            border-bottom-left-radius: 3px;
+            margin-right: 5px;
+        }
+        .language {
+            top: 440px;
+            height: 190px;
+        }
+        .language li {
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        .language p span {
+            display: inline-block;
+            font-size: 80%;
+            color: #fff;
+            background: #773460;
+            padding: 3px 5px;
+            margin: 5px 2px 0;
+            border-radius: 3px;
+        }
+        .language .star {
+            display: inline-block;
+            background: #773460;
+            width: 14px;
+            height: 14px;
+            clip-path: polygon(0 40%, 35% 35%, 50% 5%, 65% 35%, 100% 40%, 72% 65%, 80% 100%, 50% 80%, 20% 100%, 28% 65%, 0 40%);
+        }
+        .interest {
+            top: 630px;
+        }
+        .interest span {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        .education,
+        .experience,
+        .skill {
+            left: 0;
+            right: 220px;
+            background: #773460;
+            color: #fff;
+        }
+        .education::before,
+        .experience::before,
+        .skill::before {
+            float: left;
+            content: '';
+            display: block;
+            width: 30px;
+            height: 100%;
+            border-right: 1px solid #fff;
+            margin-right: 20px;
+        }
+        .education h2,
+        .experience h2,
+        .skill h2 {
+            width: 130px;
+            margin-top: 30px;
+            margin-left: 15px;
+            color: #773460;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            background: 
+                linear-gradient(135deg, #773460 10px, #fff 0) top left,
+                linear-gradient(45deg, #773460 10px, #fff 0) bottom left;
+            background-size: 100% 50.5%;
+            background-repeat: no-repeat;
+        }
+        .education h2::before,
+        .experience h2::before,
+        .skill h2::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            border-radius: 50%;
+            background: #773460;
+            margin-left: -25px;
+            margin-right: 20px;
+        } 
+        .education {
+            top: 0;
+            height: 200px;
+        }
+        .education > div,
+        .experience > div {
+            overflow: hidden;
+        }
+        .education span,
+        .experience span {
+            font-size: 80%;
+        }
+        .education span + div, 
+        .experience span + div {
+            margin: 5px 0 10px;
+        }
+        .education span + div p,
+        .experience span + div p {
+            font-size: 80%;
+            color: rgba(255, 255, 255, .8);
+            margin-top: 10px;
+            clear: both;
+            padding-right: 20px;
+        }
+        .experience {
+            top: 200px;
+            height: 770px;
+        }
+        .education span + div span,
+        .experience span + div span {
+            float: right;
+            margin-top: -20px;
+            margin-right: 20px;
+        }
+        .skill {
+            top: 870px;
+            height: 252px;
+        }
+        .skill li {
+            margin-bottom: 5px;
+        }
+        .skill label {
+            display: inline-block;
+            font-size: 14px;
+            width: 100px;
+        }
+        .skill progress {
+            width: 300px;
+            height: 12px;
+            outline: 1px solid #fff;
+            border: 1px solid #773460;
+            background: #773460;
+        }
+        progress::-webkit-progress-bar {
+            background: #fff;
+        }
+        progress::-webkit-progress-value {
+            background: #773460;
+        }
+        .skill span {
+            display: inline-block;
+            background: #fff;
+            color: #773460;
+            font-size: 80%;
+            border-radius: 3px;
+            padding: 1px 5px;
+            margin: 0 2px 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>个人简历</h1>
+        <section class="avatar">
+            <div>
+                <img src="./CgqKkVcRC2uAYczNAAH3wWuQXJ8225.jpg">
+            </div>
+            <p><span>张舒</span><i>Ushio</i></p>
+        </section>
+        <section class="info">
+            <h2>基本信息<i>INFORMATION</i></h2>
+            <ul>
+                <li><span>生日<i>Birth</i></span>1989.8.16</li>
+                <li><span>户口<i>Census register</i></span>广东深圳</li>
+                <li><span>籍贯<i>Birthplace</i></span>湖南吉首</li>
+                <li><span>民族<i>Nationality</i></span>土家族</li>
+                <li><span>电话<i>Telephone</i></span>15986608015</li>
+                <li><span>邮件<i>Email</i></span>jylzs369@163.com</li>
+            </ul>
+        </section>
+        <section class="education">
+            <h2>教育背景<i>EDUCATION</i></h2>
+            <div>
+                <span>2017.2.18 ~ 至今</span>
+                <div>
+                    <span>大数据心理学<i>Big data psychology</i></span>
+                    <h3>中国科学院心理研究所<i>Institute of Psychology of the Chinese Academy of Sciences</i></h3>
+                    <h4>在职研究生</h4>
+                    <p></p>
+                </div>
+            </div>
+            <div>
+                <span>2007.9.1 ~ 2011.7.1</span>
+                <div>
+                    <span>计算机科学与技术<i>Computer Science and Technology</i></span>
+                    <h3>中国人民解放军理工大学<i>PLA University of Science and Technology</i></h3>
+                    <h4>本科</h4>
+                    <p>曾获2次校级2等奖学金、1次三等奖学金及优秀学员称号</p>
+                </div>
+            </div>
+        </section>
+        <section class="experience">
+            <h2>工作经历<i>EXPERIENCE</i></h2>
+            <div>
+                <span>2016.9 ~ 至今</span>
+                <div>
+                    <span>高级前端开发工程师</span>
+                    <h3>万科物业发展有限公司<i></i></h3>
+                    <h4>数据与信息中心<i></i></h4>
+                    <p>万科物业发展有限公司是“全球最大的住宅开发商”中国首批上市公司万科企业股份有限公司旗下的全资下属机构。万科物业作为中国物业管理行业品牌创新的领跑者，多年来始终坚持“服务至诚，精益求精，管理规范，进取创新"的质量方针，运用超前的管理理念和创造性的思维，不断探索物业管理新模式，在推动物业管理行业发展、引领行业进步方面做出了积极贡献。</p>
+                </div>
+            </div>
+            <div>
+                <span>2015.8 ~ 2016.7</span>
+                <div>
+                    <span>高级前端开发工程师</span>
+                    <h3>深圳投之家金融信息服务有限公司<i></i></h3>
+                    <h4>UED部<i></i></h4>
+                    <p>投之家隶属于深圳投之家金融信息服务有限公司，2014年9月16日正式上线运营，是国内专业领先的P2P网贷垂直搜索引擎。投之家秉承“精选、分散”的安全投资理念，旨在通过严格的风控管理、创新的互联网技术，为用户提供优质靠谱的搜索、比较、一站式投资服务，让用户的投资理财变得安全、简单、高效。</p>
+                </div>
+            </div>
+            <div>
+                <span>2015.1 ~ 2015.8</span>
+                <div>
+                    <span>前端开发工程师 [副研发经理]</span>
+                    <h3>深圳市方云互联网有限公司<i></i></h3>
+                    <h4>研发部<i></i></h4>
+                    <p>深圳方云互联网有限公司成于2014年8月在广东省深圳市成立，是一家专业提供定制服务的网络平台公司。是中国专属化定制资源整合平台的先行者，也是中国专注于服务中高端消费人群的互联网企业之一。</p>
+                </div>
+            </div>
+            <div>
+                <span>2012.3 ~ 2015.1</span>
+                <div>
+                    <span>前端工程师 [主任]</span>
+                    <h3>梦展望贸易（深圳）有限公司<i></i></h3>
+                    <h4>国际业务部<i></i></h4>
+                    <p>梦展望是来自日本的潮流时尚女装品牌，梦展望以'可爱甜美文化'为背景，打造适合年轻女性的'甜美'商品，将从梦展望时尚潮流中衍生出来的独一无二的『可爱』传达给国内外的顾客，方便快捷地将商品送到顾客手中，以此为理念开拓国内外市场，提高梦展望的品牌价值。</p>
+                </div>
+            </div>
+            <div>
+                <span>2011.4 ~ 2011.12</span>
+                <div>
+                    <span>多媒体工程师</span>
+                    <h3>深圳市斑马文化传播有限公司<i></i></h3>
+                    <h4>设计部<i></i></h4>
+                    <p>十年历练，十年成长，十年飞跃。 斑马以坚定的脚步为1000多家知名企业奉上华美乐章，助力企业发展，提升企业形象，维护企业更新。</p>
+                </div>
+            </div>
+        </section>
+        <section class="skill">
+            <h2>专业技能<i>SKILLS</i></h2>
+            <ol>
+               <li><label>Javascript</label><progress max="100" value="90"></progress></li>
+               <li><label>HTML&CSS</label><progress max="100" value="95"></progress></li>
+               <li><label>NodeJS</label><progress max="100" value="75"></progress></li>
+            </ol>
+            <div>
+                <h5>其他标签</h5>
+                <span>ES6/7</span>
+                <span>Vue</span>
+                <span>JQuery</span>
+                <span>Angular</span>
+                <span>Express</span>
+                <span>Native.js</span>
+                <span>Bootstrap</span>
+                <span>gulp</span>
+                <span>webpack</span>
+                <span>Sass</span>
+                <span>Postcss</span>
+                <span>Git</span>
+                <span>MongoDB</span>
+                <span>React</span>
+                <span>Mui</span>
+                <span>Handlebars</span>
+            </div>
+        </section>
+        <section class="language">
+            <h2>语言能力</h2>
+            <ul>
+                <li>日语
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <p><span>JLPT1级</span><span>JTEST准A</span></p>
+                </li>
+                <li>英语
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <p><span>CET6</span></p>
+                </li>
+                <li>韩语
+                    <span class="star"></span>
+                </li>
+            </ul>
+        </section>
+        <section class="interest">
+            <h2>兴趣爱好</h2>
+            <div>
+                <span>阅读</span>
+                <span>唱歌</span>
+                <span>游戏</span>
+                <span>电影</span>
+                <span>美食</span>
+                <span>动漫</span>
+                <span>遛弯</span>
+                <span>学习</span>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

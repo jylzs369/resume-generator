@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人简历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Microsoft Yahei';
+            background: #000;
+        }
+        main {
+            position: relative;
+            background: #fff;
+            color: #773460;
+            width: 790px;
+            height: 1122px;
+            margin: 0 auto;
+        }
+        section {
+            position: absolute;
+        }
+        ul, li {
+            list-style: none;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        i {
+            font-style: normal;
+            font-size: 80%;
+           display: none;
+        }
+        h1 {
+            display: none;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            float: left;
+            font-size: 16px;
+            border-bottom: 1px solid #fff;
+            margin-bottom: 5px;
+            padding-bottom: 5px;
+        }
+        h4 {
+            float: left;
+            font-size: 14px;
+            margin-left: 10px;
+            margin-top: 1px;
+        }
+        h5 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        img {
+            width: 100%;
+        }
+        .about,
+        .project {
+            left: 0;
+            right: 0;
+            background: #773460;
+            color: #fff;
+        }
+        .about::before,
+        .project::before {
+            float: left;
+            content: '';
+            display: block;
+            width: 30px;
+            height: 100%;
+            border-right: 1px solid #fff;
+            margin-right: 20px;
+        }
+        .about h2,
+        .project h2 {
+            width: 130px;
+            margin-top: 30px;
+            margin-left: 15px;
+            color: #773460;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            background: 
+                linear-gradient(135deg, #773460 10px, #fff 0) top left,
+                linear-gradient(45deg, #773460 10px, #fff 0) bottom left;
+            background-size: 100% 50.5%;
+            background-repeat: no-repeat;
+        }
+        .about h2::before,
+        .project h2::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            border-radius: 50%;
+            background: #773460;
+            margin-left: -25px;
+            margin-right: 20px;
+        }
+        .project > div {
+            float: left;
+            width: 45%;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .project dl {
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        .project dl dt {
+            color: rgba(255, 255, 255, .8)
+        }
+        .project dl li {
+            line-height: 2;
+        }
+        .project span {
+            font-size: 80%;
+        }
+        .project span + div {
+            margin: 5px 0 10px;
+        }
+        .project span + div p {
+            font-size: 80%;
+            color: rgba(255, 255, 255, .8);
+            margin-top: 10px;
+            clear: both;
+            padding-right: 20px;
+        }
+        .project span + div span {
+            float: right;
+            margin-top: -20px;
+            margin-right: 20px;
+        }
+        .project {
+            top: 0;
+            height: 710px;
+        }
+        .about {
+            top: 710px;
+            height: 412px;
+        }
+        .about p {
+            font-size: 13px;
+            line-height: 2;
+            padding-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>个人简历</h1>
+        <section class="project">
+            <h2>项目经验<i>EXPERIENCE</i></h2>
+            <div>
+                <span>万科物业发展有限公司</span>
+                <div>
+                    <h3>万科物业资源管理系统<i></i></h3>
+                    <p>万科物业全员工在职生命周期的管理系统信息平台，未来将集成全面即可定制的服务功能，推广至整个物业行业</p>
+                    <dl>
+                        <dt>项目职责</dt>
+                        <li>1.参与需求评审，借助敏捷开发完成需求的快速迭代</li>
+                        <li>2.解决技术瓶颈，提升系统性能，优化用户体验</li>
+                        <li>3.研究前端技术，参与设计架构，改善开发流程</li>
+                    </dl>
+                </div>
+            </div>
+            <div>
+                <span>万科物业发展有限公司</span>
+                <div>
+                    <h3>助这儿APP后台与H5页面开发<i></i></h3>
+                    <p>服务于万科物业全员工在职生命周期的移动考勤管理应用，正在逐步打造成可应用到全物业行业的企业级移动应用</p>
+                    <dl>
+                        <dt>项目职责</dt>
+                        <li>1.负责前端架构，实现功能组件复用，优化开发流程</li>
+                        <li>2.与Python后台配合，开发功能独立的程序</li>
+                        <li>3.配合开发其他功能</li>
+                    </dl>
+                </div>
+            </div>
+            <div>
+                <span>深圳投之家金融信息服务有限公司</span>
+                <div>
+                    <h3>投之家互联网一站式财富管理平台<i></i></h3>
+                    <p>专业领先的网贷垂直搜索引擎及资产交易平台</p>
+                    <dl>
+                        <dt>项目职责</dt>
+                        <li>1.主导前端架构，制定前端开发规范</li>
+                        <li>2.重构前端页面，设计开发可复用组件和功能模块</li>
+                        <li>3.优化站点性能，提高用户体验</li>
+                        <li>4.开发H5特辑</li>
+                    </dl>
+                </div>
+            </div>
+            <div>
+                <span>深圳市方云互联网有限公司</span>
+                <div>
+                    <h3>定制100<i></i></h3>
+                    <p>定制100私人定制商城、APP应用</p>
+                    <dl>
+                        <dt>项目职责</dt>
+                        <li>1.从0开发WEB商城，开发组件。 </li>
+                        <li>2.配合移动端开发人员制作H5页面。</li>
+                        <li>3.维护页面及修改BUG</li>
+                        <li>4.配合运营部翻译海外旅游板块的日语资料。</li>
+                    </dl>
+                </div>
+            </div>
+            <div>
+                <span>梦展望贸易（深圳）有限公司</span>
+                <div>
+                    <h3>梦展望<i></i></h3>
+                    <p>梦展望品牌介绍官网、官方在线商城及手机端商城</p>
+                    <dl>
+                        <dt>项目职责</dt>
+                        <li>1.开发对日各平台电商网站</li>
+                        <li>2.维护页面，解决各平台站点的兼容性问题</li>
+                        <li>3.定期改版网站</li>
+                        <li>4.管理、合理分配业务，改善工作流程，指导组员发展</li>
+                    </dl>
+                </div>
+            </div>
+            <div>
+                <span>深圳市斑马文化传播有限公司</span>
+                <div>
+                    <h3>毓秀山国际生态城<i></i></h3>
+                    <p>毓秀山国际生态城展厅触摸屏导览程序和宣传动画</p>
+                    <dl>
+                        <dt>项目职责</dt>
+                        <li>1.实现触摸屏功能逻辑，整合3D素材、配乐</li>
+                        <li>2.开发宣传动画特效，剪辑合成</li>
+                    </dl>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <h2>关于我<i>ABOUT ME</i></h2>
+            <p>经常思考人生，喜欢挑战自我，对自己要求严格同时又积极向上、享受生活，对新鲜事物充满好奇心，学习是常态，将知识当作毕生追求。有过在军校中磨练的经历，深切体会到自由之不易，同时也培养出了坚持、忍耐、乐观和感恩的心态。巧遇WEB技术，赶上了WEB2.0大时代的浪潮，并投身到互联网行业，由于自小的艺术功底，特别注重设计交互和功能的平衡，乐于探索领域中的前沿技术；从业5年有余，参与过各类型项目的开发，如大型电商平台、金融平台、移动端Hybird应用、跨系统H5应用、大型后台管理系统、数据可视化等，熟悉各种技术在不同项目中的适用场景。逻辑性强、冷静敏锐，有一贯秉承的行事原则和管理经验，重视团队合作和有效沟通，喜好研究心理，期望在未来的职业生涯中将技术与心理学结合起来，在某个领域中贡献出自己一份绵薄之力。希望能与一帮有激情有热血，志同道合的伙伴踏上一段不留遗憾的旅程。</p>
+        </section>
+    </main>
+</body>
+</html>
